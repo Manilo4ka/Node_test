@@ -6,16 +6,6 @@ app.listen(80);
 
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 
-app.get('/name:name', function(req, res) {
-//console.log(req.query);
-	res.send('Guten Tag, Frau ' + req.params.name);
-});
-
-app.get('/login', function(req, res) {
-//console.log(req.query);
-	res.sendFile(__dirname + "/static/login.html");
-});
-
 app.get('/', function(req, res) {
     res.sendFile(__dirname + "/static/index.html");
 });
